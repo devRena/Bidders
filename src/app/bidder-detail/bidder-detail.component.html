@@ -1,0 +1,17 @@
+<div class="page">
+	<!--<h3>< / ></h3>
+	<h4>View your bidders > <span style="font-weight: 400;">{{bidder.bidder}}</span></h4>-->
+	<hr>
+	<div *ngIf="bidder">
+	  <h3 style="font-weight:300;">Bidder Settings</h3><br>
+	  <div class="updatebid">
+		<label style="margin-right: 380px;width:100px;"><span>Bidder name:</span>
+		  <input [(ngModel)]="bidder.bidder" placeholder="bidder"/>
+		</label>
+		<label style="margin-right: 350px;width:100px;"><span>Endpoint URL:</span>
+		  <input [(ngModel)]="bidder.endpoint" placeholder="bidder"/>
+		</label>
+	  </div>
+<div class="mybutton"><button (click)="save()">SAVE</button></div>
+	</div>
+</div>

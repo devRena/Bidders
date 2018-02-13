@@ -1,0 +1,51 @@
+<div class="page">
+	<h3>< / ></h3>
+	<h4>View your bidders</h4>
+	<hr>
+	<!-- Use a custom component to render a list of phones -->
+	<div class="content">
+		<ul class="compolist">
+			<li>
+			<span class="titlecompo">Submitted</span>
+			<span class="bidderslist">
+				<ul class="bidders">
+				  <li *ngFor="let bidder of bidders | BidderFilter:filterargs">
+					<a routerLink="/detail/{{bidder.id}}">
+					 <div class="bidtitle"> 
+					  <span>{{bidder.bidder}}</span>
+					  <p>{{bidder.endpoint}}</p>
+					</div>
+					<div class="bidfont">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+					</div>
+					<a href="#" class="click">validate your bidder</a>
+					</a>
+				  </li>
+				</ul>
+			</span>
+			</li>
+			<li>
+			<span class="titlecompo">Live</span>
+			<span class="bidderslist">
+				<ul class="bidders">
+				  <li *ngFor="let bidder of bidders | BidderFilter:filterargs2">
+					<a routerLink="/detail/{{bidder.id}}">
+					<div class="bidtitle">
+					  <span>{{bidder.bidder}}</span>
+					  <p>{{bidder.endpoint}}</p>
+					</div>
+					<div class="bidfont">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+					</div>
+					<a href="#" class="click">validate your bidder</a>
+					</a>
+					<!--<button class="delete" title="delete bidder"
+					(click)="delete(bidder)">x</button>-->
+				  </li>
+				</ul>
+			</span>
+			</li>
+			<div class="myclear"></div>
+		</ul>
+	</div>
+</div>
